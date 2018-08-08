@@ -1,6 +1,7 @@
 # AItest
 togithub
-‘’‘ python
+## net = caffe.Net(net_ptt, caffe_model, caffe.TEST)
+'''python 
 def get_inference_results(val_file, net_ptt, caffe_model, data_dir=""):
     """Get results from the validation file
     Args:
@@ -14,9 +15,10 @@ def get_inference_results(val_file, net_ptt, caffe_model, data_dir=""):
     caffe.set_mode_gpu()
     caffe.set_device(0)
     #net = caffe.Net(net_ptt, caffe_model, caffe.TEST)
+    
     net = caffe.Net(net_ptt, caffe_model, caffe.TEST)
     print("The input data shape: " + str(net.blobs['data'].data.shape))
-
+    
     # Set the transformer for preprocessing data
     transformer = caffe.io.Transformer({'data': net.blobs['data'].data.shape})
     transformer.set_transpose('data', (2,0,1))
