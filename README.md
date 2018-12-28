@@ -48,4 +48,4 @@ def get_inference_results(val_file, net_ptt, caffe_model, data_dir=""):
         y_test.append(int(label))
         predictions.append(np.argsort(out['loss'])[0])
     return img_paths, y_test, predictions
-    ’‘’
+```
