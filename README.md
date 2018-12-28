@@ -1,9 +1,11 @@
 # AItest
 togithub
+
 ## net = caffe.Net(net_ptt, caffe_model, caffe.TEST)
 '''python 
 def get_inference_results(val_file, net_ptt, caffe_model, data_dir=""):
-    """Get results from the validation file
+    ''' 
+    Get results from the validation file
     Args:
         val_file: the validation file, a line is formated as: image_path label
         net_ptt: the prototxt for evaluation and deployment
@@ -11,7 +13,7 @@ def get_inference_results(val_file, net_ptt, caffe_model, data_dir=""):
         data_dir: where the test images lie on, abs_image_path=$data_dir/image_path
     Return:
         The lists contains the image paths, ground truth and predictions
-    """
+     '''
     caffe.set_mode_gpu()
     caffe.set_device(0)
     #net = caffe.Net(net_ptt, caffe_model, caffe.TEST)
